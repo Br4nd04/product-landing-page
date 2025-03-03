@@ -4,157 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Panadería Artesanal - Productos frescos horneados diariamente">
-    <title>Pan a la leña: "CHINITO"</title>
+    <title>Panadería Artesanal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="50" height="50">
-                <h1>Panes a la leña "CHINITO"</h1>
+<body class="bg-white">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/logo.png" alt="Logo de Panadería Artesanal" class="w-12 h-12 mr-3">
+                <h1 class="text-xl font-bold">Panadería Artesanal</h1>
             </div>
-            <nav aria-label="Navegación principal">
-                <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
-                    Menú <span aria-hidden="true">☰</span>
+            <nav>
+                <button id="menu-toggle" class="md:hidden">
+                    Menú ☰
                 </button>
-                <ul id="menu-principal">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="testimonios.html">Testimonios</a></li>
-                    <li><a href="compra.html">Comprar</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                <ul id="menu-items" class="hidden md:flex space-x-4">
+                    <li><a href="#inicio" class="hover:underline">Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:underline">Nosotros</a></li>
+                    <li><a href="#productos" class="hover:underline">Productos</a></li>
+                    <li><a href="testimonios.html" class="hover:underline">Testimonios</a></li>
+                    <li><a href="compra.html" class="hover:underline">Comprar</a></li>
+                    <li><a href="#contacto" class="hover:underline">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="inicio" class="hero">
-            <div class="container">
-                <h2>Bienvenidos a nuestra panadería</h2>
-                <p>Horneamos con pasión y tradición desde 2023</p>
-                <a href="#productos" class="btn">Ver nuestros productos</a>
+        <section id="inicio" class="hero-section py-16 text-center">
+            <div class="container mx-auto px-4 relative z-10">
+                <h2 class="text-3xl font-bold mb-4">Bienvenidos a nuestra panadería</h2>
+                <p class="text-lg mb-6">Horneamos con pasión y tradición desde 1985</p>
+                <a href="#productos" class="btn-custom">Ver nuestros productos</a>
             </div>
         </section>
 
-        <section id="nosotros" class="about">
-            <div class="container">
-                <h2>Sobre Nosotros</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>En Panadería Artesanal nos dedicamos a crear productos de panadería de la más alta calidad utilizando ingredientes frescos y técnicas tradicionales.</p>
+        <section id="nosotros" class="py-12 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold text-center mb-8">Sobre Nosotros</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <p class="mb-4">En Panadería Artesanal nos dedicamos a crear productos de panadería de la más alta calidad utilizando ingredientes frescos y técnicas tradicionales.</p>
                         <p>Nuestro equipo de panaderos expertos trabaja diariamente para ofrecerte el mejor pan y repostería de la ciudad.</p>
                     </div>
-                    <div class="about-image">
-                        <img src="img/sobre_nosotros.jpeg" alt="Nuestro equipo de panaderos trabajando" width="400" height="300">
+                    <div class="md:w-1/2">
+                        <img src="img/sobre_nosotros.jpeg" alt="Nuestro equipo de panaderos trabajando" class="rounded">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="productos" class="products">
-            <div class="container">
-                <h2>Nuestros Productos</h2>
-                <div class="product-grid">
-                    <article class="product-card">
-                        <img src="img/pizza.jpg" alt="Pizza" width="300" height="200">
-                        <h3>Pizza</h3>
-                        <p>Nuestra pizza</p>
-                        <p class="price">$3.50</p>
-                    </article>
-                    <article class="product-card">
-                        <img src="img/CHAPLA.jpg" alt="Chapla" width="300" height="200">
-                        <h3>Pan Chapla</h3>
-                        <p>Crujientes por fuera, suaves por dentro..</p>
-                        <p class="price">$2.75</p>
-                    </article>
-                    <article class="product-card">
-                        <img src="img/pan_con_queso.jpg" alt="Pan_con_queso" width="300" height="200">
-                        <h3>Pan con queso</h3>
-                        <p>Pan artesanal con relleno de queso.</p>
-                        <p class="price">$25.00</p>
-                    </article>
-                    <article class="product-card">
-                        <img src="img/pan_con_aceituna.jpg" alt="Pan_con_aceituna" width="300" height="200">
-                        <h3>Pan con aceituna</h3>
-                        <p>Pan artesanal con relleno de aceituna.</p>
-                        <p class="price">$2.00</p>
-                    </article>
+        <section id="productos" class="py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold text-center mb-8">Nuestros Productos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="border rounded overflow-hidden">
+                        <img src="img/pizza.jpg" alt="Pan artesanal de masa madre" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2">Pan de Masa Madre</h3>
+                            <p class="text-gray-600 mb-2">Nuestro pan insignia, fermentado naturalmente durante 24 horas.</p>
+                            <p class="font-bold text-primary" style="color: var(--color-primary);">$3.50</p>
+                        </div>
+                    </div>
+                    <div class="border rounded overflow-hidden">
+                        <img src="img/CHAPLA.jpg" alt="Croissants recién horneados" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2">Croissants</h3>
+                            <p class="text-gray-600 mb-2">Crujientes por fuera, suaves por dentro. Hechos con mantequilla francesa.</p>
+                            <p class="font-bold text-primary" style="color: var(--color-primary);">$2.75</p>
+                        </div>
+                    </div>
+                    <div class="border rounded overflow-hidden">
+                        <img src="img/pan_con_queso.jpg" alt="Pastel de chocolate" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2">Pastel de Chocolate</h3>
+                            <p class="text-gray-600 mb-2">Tres capas de bizcocho con ganache de chocolate negro.</p>
+                            <p class="font-bold text-primary" style="color: var(--color-primary);">$25.00</p>
+                        </div>
+                    </div>
+                    <div class="border rounded overflow-hidden">
+                        <img src="img/pan_con_aceituna.jpg" alt="Baguette tradicional" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2">Baguette</h3>
+                            <p class="text-gray-600 mb-2">Crujiente y dorada, perfecta para acompañar cualquier comida.</p>
+                            <p class="font-bold text-primary" style="color: var(--color-primary);">$2.00</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contacto" class="contact">
-            <div class="container">
-                <h2>Contacto</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Información</h3>
-                        <address>
-                            <p><strong>Dirección:</strong> Chilca 15870</p>
-                            <p><strong>Teléfono:</strong> <a href="tel:+123456789">456-7890</a></p>
-                            <p><strong>Email:</strong> <a href="mailto:info@panaderiaartesanal.com">info@panaderiaartesanal.com</a></p>
+        <section id="contacto" class="py-12 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold text-center mb-8">Contacto</h2>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <h3 class="text-xl font-semibold mb-4">Información</h3>
+                        <address class="not-italic mb-6">
+                            <p class="mb-2"><strong>Dirección:</strong> Calle Panaderos 123, Ciudad</p>
+                            <p class="mb-2"><strong>Teléfono:</strong> <a href="tel:+123456789" style="color: var(--color-primary);">123-456-789</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:info@panaderiaartesanal.com" style="color: var(--color-primary);">info@panaderiaartesanal.com</a></p>
                         </address>
-                        <div class="hours">
-                            <h3>Horario</h3>
-                            <ul>
-                                <li><strong>Lunes a Viernes:</strong> 7:00 - 20:00</li>
-                                <li><strong>Sábados:</strong> 8:00 - 18:00</li>
-                                <li><strong>Domingos:</strong> 9:00 - 14:00</li>
-                            </ul>
-                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Horario</h3>
+                        <ul>
+                            <li class="mb-2"><strong>Lunes a Viernes:</strong> 7:00 - 20:00</li>
+                            <li class="mb-2"><strong>Sábados:</strong> 8:00 - 18:00</li>
+                            <li><strong>Domingos:</strong> 9:00 - 14:00</li>
+                        </ul>
                     </div>
-                    <form class="contact-form" action="#" method="post">
-                        <h3>Envíanos un mensaje</h3>
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Enviar mensaje</button>
-                    </form>
+                    <div class="md:w-1/2">
+                        <form action="#" method="post" class="bg-white p-6 border rounded">
+                            <h3 class="text-xl font-semibold mb-4">Envíanos un mensaje</h3>
+                            <div class="mb-4">
+                                <label for="nombre" class="block mb-2">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required class="w-full border p-2 rounded">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full border p-2 rounded">
+                            </div>
+                            <div class="mb-4">
+                                <label for="mensaje" class="block mb-2">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required class="w-full border p-2 rounded"></textarea>
+                            </div>
+                            <button type="submit" class="btn-custom">Enviar mensaje</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
                     <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="80" height="80">
-                    <p>Panadería Artesanal</p>
+                    <h5>Panadería Artesanal</h5>
+                    <p>Horneamos con pasión desde 1985</p>
                 </div>
-                <div class="footer-links">
-                    <h3>Enlaces rápidos</h3>
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
                     <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="testimonios.html">Testimonios</a></li>
-                        <li><a href="compra.html">Comprar</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li class="mb-2"><a href="#inicio" class="hover:underline">Inicio</a></li>
+                        <li class="mb-2"><a href="#nosotros" class="hover:underline">Nosotros</a></li>
+                        <li class="mb-2"><a href="#productos" class="hover:underline">Productos</a></li>
+                        <li class="mb-2"><a href="testimonios.html" class="hover:underline">Testimonios</a></li>
+                        <li class="mb-2"><a href="compra.html" class="hover:underline">Comprar</a></li>
+                        <li><a href="#contacto" class="hover:underline">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h3>Síguenos</h3>
-                    <ul class="social-links">
-                        <li><a href="#" aria-label="Facebook"><span aria-hidden="true">Facebook</span></a></li>
-                        <li><a href="#" aria-label="Instagram"><span aria-hidden="true">Instagram</span></a></li>
-                        <li><a href="#" aria-label="Tik Tok"><span aria-hidden="true">Tik Tok</span></a></li>
-                    </ul>
+                <div class="w-full md:w-1/3">
+                    <h3 class="text-lg font-semibold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-400">Facebook</a>
+                        <a href="#" class="hover:text-gray-400">Instagram</a>
+                        <a href="#" class="hover:text-gray-400">Twitter</a>
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
                 <p>&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>
             </div>
         </div>
@@ -162,12 +172,11 @@
 
     <script>
         // Script básico para el menú móvil
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            const menuPrincipal = document.getElementById('menu-principal');
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !expanded);
-            menuPrincipal.classList.toggle('active');
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menuItems = document.getElementById('menu-items');
+            menuItems.classList.toggle('hidden');
         });
     </script>
 </body>
 </html>
+

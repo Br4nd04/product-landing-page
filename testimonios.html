@@ -5,97 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Testimonios de clientes satisfechos de Panadería Artesanal">
     <title>Testimonios - Panadería Artesanal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="50" height="50">
-                <h1>Panadería Artesanal</h1>
+<body class="bg-white">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/logo.png" alt="Logo de Panadería Artesanal" class="w-12 h-12 mr-3">
+                <h1 class="text-xl font-bold">Panadería Artesanal</h1>
             </div>
-            <nav aria-label="Navegación principal">
-                <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
-                    Menú <span aria-hidden="true">☰</span>
+            <nav>
+                <button id="menu-toggle" class="md:hidden">
+                    Menú ☰
                 </button>
-                <ul id="menu-principal">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#nosotros">Nosotros</a></li>
-                    <li><a href="index.html#productos">Productos</a></li>
-                    <li><a href="testimonios.html">Testimonios</a></li>
-                    <li><a href="compra.html">Comprar</a></li>
-                    <li><a href="index.html#contacto">Contacto</a></li>
+                <ul id="menu-items" class="hidden md:flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">Inicio</a></li>
+                    <li><a href="index.html#nosotros" class="hover:underline">Nosotros</a></li>
+                    <li><a href="index.html#productos" class="hover:underline">Productos</a></li>
+                    <li><a href="testimonios.html" class="hover:underline">Testimonios</a></li>
+                    <li><a href="compra.html" class="hover:underline">Comprar</a></li>
+                    <li><a href="index.html#contacto" class="hover:underline">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="testimonios">
-            <div class="container">
-                <h2>Testimonios de Nuestros Clientes</h2>
-                <div class="testimonios-grid">
-                    <article class="testimonio-card">
-                        <img src="img/mujer.jpg" alt="Foto de María García" width="150" height="150" class="testimonio-imagen">
-                        <blockquote>
-                            <p>"El pan de masa madre es simplemente increíble. Nunca había probado algo tan delicioso y auténtico. ¡Ahora soy cliente habitual!"</p>
-                        </blockquote>
-                        <cite>- María García</cite>
-                    </article>
-                    <article class="testimonio-card">
-                        <img src="img/man.jpg" alt="Foto de Juan Pérez" width="150" height="150" class="testimonio-imagen">
-                        <blockquote>
-                            <p>"Los croissants son los mejores que he probado fuera de Francia. Crujientes por fuera y suaves por dentro. ¡Una delicia!"</p>
-                        </blockquote>
-                        <cite>- Juan Pérez</cite>
-                    </article>
-                    <article class="testimonio-card">
-                        <img src="img/mujer.jpg" alt="Foto de Ana Martínez" width="150" height="150" class="testimonio-imagen">
-                        <blockquote>
-                            <p>"El pastel de chocolate que encargué para el cumpleaños de mi hijo fue un éxito total. Todos los invitados quedaron encantados."</p>
-                        </blockquote>
-                        <cite>- Ana Martínez</cite>
-                    </article>
-                    <article class="testimonio-card">
-                        <img src="img/chef.jpg" alt="Foto de Carlos Rodríguez" width="150" height="150" class="testimonio-imagen">
-                        <blockquote>
-                            <p>"Como chef, aprecio la calidad de los ingredientes y la atención al detalle. La Panadería Artesanal nunca decepciona."</p>
-                        </blockquote>
-                        <cite>- Carlos Rodríguez, Chef</cite>
-                    </article>
-                </div>
+    <main class="py-12">
+        <section class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8">Testimonios de Nuestros Clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <article class="border rounded p-4 text-center">
+                    <img src="img/mujer.jpg" alt="Foto de María García" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <blockquote>
+                        <p class="italic mb-4">"El pan de masa madre es simplemente increíble. Nunca había probado algo tan delicioso y auténtico. ¡Ahora soy cliente habitual!"</p>
+                        <cite class="font-semibold" style="color: var(--color-primary);">- María García</cite>
+                    </blockquote>
+                </article>
+                <article class="border rounded p-4 text-center">
+                    <img src="img/man.jpg" alt="Foto de Juan Pérez" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <blockquote>
+                        <p class="italic mb-4">"Los croissants son los mejores que he probado fuera de Francia. Crujientes por fuera y suaves por dentro. ¡Una delicia!"</p>
+                        <cite class="font-semibold" style="color: var(--color-primary);">- Juan Pérez</cite>
+                    </blockquote>
+                </article>
+                <article class="border rounded p-4 text-center">
+                    <img src="img/mujer.jpg" alt="Foto de Ana Martínez" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <blockquote>
+                        <p class="italic mb-4">"El pastel de chocolate que encargué para el cumpleaños de mi hijo fue un éxito total. Todos los invitados quedaron encantados."</p>
+                        <cite class="font-semibold" style="color: var(--color-primary);">- Ana Martínez</cite>
+                    </blockquote>
+                </article>
+                <article class="border rounded p-4 text-center">
+                    <img src="img/chef.jpg" alt="Foto de Carlos Rodríguez" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <blockquote>
+                        <p class="italic mb-4">"Como chef, aprecio la calidad de los ingredientes y la atención al detalle. La Panadería Artesanal nunca decepciona."</p>
+                        <cite class="font-semibold" style="color: var(--color-primary);">- Carlos Rodríguez, Chef</cite>
+                    </blockquote>
+                </article>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
                     <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="80" height="80">
-                    <p>Panadería Artesanal</p>
+                    <h5>Panadería Artesanal</h5>
+                    <p>Horneamos con pasión desde 1985</p>
                 </div>
-                <div class="footer-links">
-                    <h3>Enlaces rápidos</h3>
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="index.html#productos">Productos</a></li>
-                        <li><a href="testimonios.html">Testimonios</a></li>
-                        <li><a href="compra.html">Comprar</a></li>
-                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li class="mb-2"><a href="index.html" class="hover:underline">Inicio</a></li>
+                        <li class="mb-2"><a href="index.html#nosotros" class="hover:underline">Nosotros</a></li>
+                        <li class="mb-2"><a href="index.html#productos" class="hover:underline">Productos</a></li>
+                        <li class="mb-2"><a href="testimonios.html" class="hover:underline">Testimonios</a></li>
+                        <li class="mb-2"><a href="compra.html" class="hover:underline">Comprar</a></li>
+                        <li><a href="index.html#contacto" class="hover:underline">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h3>Síguenos</h3>
-                    <ul class="social-links">
-                        <li><a href="#" aria-label="Facebook"><span aria-hidden="true">Facebook</span></a></li>
-                        <li><a href="#" aria-label="Instagram"><span aria-hidden="true">Instagram</span></a></li>
-                        <li><a href="#" aria-label="Tik Tok"><span aria-hidden="true">Tik Tok</span></a></li>
-                    </ul>
+                <div class="w-full md:w-1/3">
+                    <h3 class="text-lg font-semibold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-400">Facebook</a>
+                        <a href="#" class="hover:text-gray-400">Instagram</a>
+                        <a href="#" class="hover:text-gray-400">Twitter</a>
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
                 <p>&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>
             </div>
         </div>
@@ -103,11 +103,9 @@
 
     <script>
         // Script básico para el menú móvil
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            const menuPrincipal = document.getElementById('menu-principal');
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !expanded);
-            menuPrincipal.classList.toggle('active');
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menuItems = document.getElementById('menu-items');
+            menuItems.classList.toggle('hidden');
         });
     </script>
 </body>
