@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 /* Estilos base */
 :root {
     --color-primary: #8b4513;
@@ -10,13 +16,7 @@
     --font-main: "Arial", sans-serif;
     --transition: all 0.3s ease;
   }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
   html {
     scroll-behavior: smooth;
   }
