@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Testimonios de clientes satisfechos de Panadería Artesanal">
+    <title>Testimonios - Panadería Artesanal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="50" height="50">
+                <h1>Panadería Artesanal</h1>
+            </div>
+            <nav aria-label="Navegación principal">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+                    Menú <span aria-hidden="true">☰</span>
+                </button>
+                <ul id="menu-principal">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="compra.html">Comprar</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="testimonios">
+            <div class="container">
+                <h2>Testimonios de Nuestros Clientes</h2>
+                <div class="testimonios-grid">
+                    <article class="testimonio-card">
+                        <img src="img/mujer.jpg" alt="Foto de María García" width="150" height="150" class="testimonio-imagen">
+                        <blockquote>
+                            <p>"El pan de masa madre es simplemente increíble. Nunca había probado algo tan delicioso y auténtico. ¡Ahora soy cliente habitual!"</p>
+                        </blockquote>
+                        <cite>- María García</cite>
+                    </article>
+                    <article class="testimonio-card">
+                        <img src="img/man.jpg" alt="Foto de Juan Pérez" width="150" height="150" class="testimonio-imagen">
+                        <blockquote>
+                            <p>"Los croissants son los mejores que he probado fuera de Francia. Crujientes por fuera y suaves por dentro. ¡Una delicia!"</p>
+                        </blockquote>
+                        <cite>- Juan Pérez</cite>
+                    </article>
+                    <article class="testimonio-card">
+                        <img src="img/mujer.jpg" alt="Foto de Ana Martínez" width="150" height="150" class="testimonio-imagen">
+                        <blockquote>
+                            <p>"El pastel de chocolate que encargué para el cumpleaños de mi hijo fue un éxito total. Todos los invitados quedaron encantados."</p>
+                        </blockquote>
+                        <cite>- Ana Martínez</cite>
+                    </article>
+                    <article class="testimonio-card">
+                        <img src="img/chef.jpg" alt="Foto de Carlos Rodríguez" width="150" height="150" class="testimonio-imagen">
+                        <blockquote>
+                            <p>"Como chef, aprecio la calidad de los ingredientes y la atención al detalle. La Panadería Artesanal nunca decepciona."</p>
+                        </blockquote>
+                        <cite>- Carlos Rodríguez, Chef</cite>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="80" height="80">
+                    <p>Panadería Artesanal</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="testimonios.html">Testimonios</a></li>
+                        <li><a href="compra.html">Comprar</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <ul class="social-links">
+                        <li><a href="#" aria-label="Facebook"><span aria-hidden="true">Facebook</span></a></li>
+                        <li><a href="#" aria-label="Instagram"><span aria-hidden="true">Instagram</span></a></li>
+                        <li><a href="#" aria-label="Tik Tok"><span aria-hidden="true">Tik Tok</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script básico para el menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const menuPrincipal = document.getElementById('menu-principal');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            menuPrincipal.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+

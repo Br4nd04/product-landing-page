@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Realiza tu pedido en Panadería Artesanal">
+    <title>Comprar - Panadería Artesanal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="50" height="50">
+                <h1>Panadería Artesanal</h1>
+            </div>
+            <nav aria-label="Navegación principal">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+                    Menú <span aria-hidden="true">☰</span>
+                </button>
+                <ul id="menu-principal">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="compra.html">Comprar</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="compra">
+            <div class="container">
+                <h2>Realiza tu Pedido</h2>
+                <form id="compra-form" class="compra-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="producto">Selecciona el producto:</label>
+                        <select id="producto" name="producto" required>
+                            <option value="">Elige un producto</option>
+                            <option value="Pizza">Pizza</option>
+                            <option value="Chapla">Chapla</option>
+                            <option value="Pan_con_queso">Pan con queso</option>
+                            <option value="Pan_con_aceituna">Pan con aceituna</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="number" id="cantidad" name="cantidad" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección de entrega:</label>
+                        <textarea id="direccion" name="direccion" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_entrega">Fecha de entrega:</label>
+                        <input type="date" id="fecha_entrega" name="fecha_entrega" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios adicionales:</label>
+                        <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Realizar Pedido</button>
+                </form>
+                <div class="whatsapp-button-container">
+                    <a href="#" id="whatsapp-button" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        Confirmar pedido por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="80" height="80">
+                    <p>Panadería Artesanal</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="testimonios.html">Testimonios</a></li>
+                        <li><a href="compra.html">Comprar</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <ul class="social-links">
+                        <li><a href="#" aria-label="Facebook"><span aria-hidden="true">Facebook</span></a></li>
+                        <li><a href="#" aria-label="Instagram"><span aria-hidden="true">Instagram</span></a></li>
+                        <li><a href="#" aria-label="Tik Tok"><span aria-hidden="true">Tik Tok</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script básico para el menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const menuPrincipal = document.getElementById('menu-principal');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            menuPrincipal.classList.toggle('active');
+        });
+
+        // Función para generar la URL de WhatsApp
+        function generarURLWhatsApp() {
+            const telefono = '1234567890';
+            const producto = document.getElementById('producto').value;
+            const cantidad = document.getElementById('cantidad').value;
+            const nombre = document.getElementById('nombre').value;
+
+            let mensaje = `Hola, vengo desde la página de Compra y me interesa este producto:\n`;
+            mensaje += `Producto: ${producto}\n`;
+            mensaje += `Cantidad: ${cantidad}\n`;
+            mensaje += `Nombre: ${nombre}\n`;
+            mensaje += `Por favor, contáctenme para confirmar mi pedido.`;
+
+            return `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        }
+
+        // Función para actualizar el botón de WhatsApp
+        function actualizarBotonWhatsApp() {
+            const boton = document.getElementById('whatsapp-button');
+            const producto = document.getElementById('producto').value;
+            const cantidad = document.getElementById('cantidad').value;
+            const nombre = document.getElementById('nombre').value;
+
+            if (producto && cantidad && nombre) {
+                boton.href = generarURLWhatsApp();
+                boton.textContent = `Confirmar pedido de ${cantidad} ${producto} por WhatsApp`;
+                boton.classList.remove('disabled');
+                boton.removeAttribute('aria-disabled');
+            } else {
+                boton.href = '#';
+                boton.textContent = 'Completa el formulario para confirmar por WhatsApp';
+                boton.classList.add('disabled');
+                boton.setAttribute('aria-disabled', 'true');
+            }
+        }
+
+        // Escuchar cambios en el formulario
+        document.getElementById('compra-form').addEventListener('change', actualizarBotonWhatsApp);
+
+        // Inicializar el botón
+        actualizarBotonWhatsApp();
+    </script>
+</body>
+</html>
+
