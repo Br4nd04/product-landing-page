@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panadería Artesanal - Productos frescos horneados diariamente">
+    <title>Pan a la leña: "CHINITO"</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="50" height="50">
+                <h1>Panes a la leña "CHINITO"</h1>
+            </div>
+            <nav aria-label="Navegación principal">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+                    Menú <span aria-hidden="true">☰</span>
+                </button>
+                <ul id="menu-principal">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Bienvenidos a nuestra panadería</h2>
+                <p>Horneamos con pasión y tradición desde 1985</p>
+                <a href="#productos" class="btn">Ver nuestros productos</a>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about">
+            <div class="container">
+                <h2>Sobre Nosotros</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>En Panadería Artesanal nos dedicamos a crear productos de panadería de la más alta calidad utilizando ingredientes frescos y técnicas tradicionales.</p>
+                        <p>Nuestro equipo de panaderos expertos trabaja diariamente para ofrecerte el mejor pan y repostería de la ciudad.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="img/sobre nosotros.jpeg" alt="Nuestro equipo de panaderos trabajando" width="400" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="products">
+            <div class="container">
+                <h2>Nuestros Productos</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="img/pizza.jpg" alt="Pizza" width="300" height="200">
+                        <h3>Pizza</h3>
+                        <p>Nuestra pizza</p>
+                        <p class="price">$3.50</p>
+                    </article>
+                    <article class="product-card">
+                        <img src="img/CHAPLA.jpg" alt="Croissants recién horneados" width="300" height="200">
+                        <h3>Pan Chapla</h3>
+                        <p>Crujientes por fuera, suaves por dentro. Hechos con mantequilla francesa.</p>
+                        <p class="price">$2.75</p>
+                    </article>
+                    <article class="product-card">
+                        <img src="img/pan con queso.jpg" alt="Pastel de chocolate" width="300" height="200">
+                        <h3>Pan con queso</h3>
+                        <p>Pan artesanal con relleno de queso.</p>
+                        <p class="price">$25.00</p>
+                    </article>
+                    <article class="product-card">
+                        <img src="img/pan con aceituna.jpg" alt="Baguette tradicional" width="300" height="200">
+                        <h3>Pan con aceituna</h3>
+                        <p>Pan artesanal con relleno de aceituna.</p>
+                        <p class="price">$2.00</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>Contacto</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Información</h3>
+                        <address>
+                            <p><strong>Dirección:</strong> Chilca 15870</p>
+                            <p><strong>Teléfono:</strong> <a href="tel:+123456789">456-7890</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:info@panaderiaartesanal.com">info@panaderiaartesanal.com</a></p>
+                        </address>
+                        <div class="hours">
+                            <h3>Horario</h3>
+                            <ul>
+                                <li><strong>Lunes a Viernes:</strong> 7:00 - 20:00</li>
+                                <li><strong>Sábados:</strong> 8:00 - 18:00</li>
+                                <li><strong>Domingos:</strong> 9:00 - 14:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="#" method="post">
+                        <h3>Envíanos un mensaje</h3>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo de Panadería Artesanal" width="80" height="80">
+                    <p>Panadería Artesanal</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <ul class="social-links">
+                        <li><a href="#" aria-label="Facebook"><span aria-hidden="true">Facebook</span></a></li>
+                        <li><a href="#" aria-label="Instagram"><span aria-hidden="true">Instagram</span></a></li>
+                        <li><a href="#" aria-label="Twitter"><span aria-hidden="true">Tik Tok</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script básico para el menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const menuPrincipal = document.getElementById('menu-principal');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            menuPrincipal.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
